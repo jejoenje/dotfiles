@@ -6,46 +6,34 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 " Shorthand notation
+Plug 'navarasu/onedark'
 Plug 'jalvesaq/Nvim-R'
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'gaalcaras/ncm-R'
 Plug 'preservim/nerdtree'
 Plug 'Raimondi/delimitMate'
-Plug 'patstockwell/vim-monokai-tasty'
-Plug 'itchyny/lightline.vim'
 
 " Initialize plugin system
 call plug#end()
 
-" Set a Local Leader
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
-
+"colorscheme onedark
+"let g:onedark_style = 'darker'
+"let g:onedark_transparent_background = false
 
 " Plugin Related Settings
 
 " NCM2
-autocmd BufEnter * call ncm2#enable_for_buffer()    " To enable ncm2 for all buffers.
-set completeopt=noinsert,menuone,noselect           " :help Ncm2PopupOpen for more
+"autocmd BufEnter * call ncm2#enable_for_buffer()    " To enable ncm2 for all buffers.
+"set completeopt=noinsert,menuone,noselect           " :help Ncm2PopupOpen for more
                                                     " information.
 
 " NERD Tree
 "map <leader>nn :NERDTreeToggle<CR>                  " Toggle NERD tree.
 nmap <C-n> :NERDTreeToggle<CR>
 
-" Monokai-tasty
-let g:vim_monokai_tasty_italic = 1                  " Allow italics.
-colorscheme vim-monokai-tasty                       " Enable monokai theme.
-
 " LightLine.vim 
-set laststatus=2              " To tell Vim we want to see the statusline.
-let g:lightline = {
-   \ 'colorscheme':'monokai_tasty',
-   \ }
+"set laststatus=2              " To tell Vim we want to see the statusline.
+"let g:lightline = {
+"   \ 'colorscheme':'monokai_tasty',
+"   \ }
 
 
 " General NVIM/VIM Settings
@@ -72,7 +60,6 @@ set autoindent                  " To copy indentation from current line
                                 " when starting a new line.
 set si                          " To switch on smart indentation.
 
-
 " Search
 set ignorecase                  " To ignore case when searching.
 set smartcase                   " When searching try to be smart about cases.
@@ -80,17 +67,14 @@ set hlsearch                    " To highlight search results.
 set incsearch                   " To make search act like search in modern browsers.
 set magic                       " For regular expressions turn magic on.
 
-
 " Brackets
 set showmatch                   " To show matching brackets when text indicator 
                                 " is over them.
 set mat=2                       " How many tenths of a second to blink 
                                 " when matching brackets.
 
-
 " Errors
 set noerrorbells                " No annoying sound on errors.
-
 
 " Color & Fonts
 syntax enable                   " Enable syntax highlighting.
@@ -102,18 +86,12 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme desert
-catch
-endtry
-
 
 " Files & Backup
 set nobackup                     " Turn off backup.
 set nowb                         " Don't backup before overwriting a file.
 set noswapfile                   " Don't create a swap file.
 set ffs=unix,dos,mac             " Use Unix as the standard file type.
-
 
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
