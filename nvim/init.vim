@@ -3,6 +3,7 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'danilo-augusto/vim-afterglow'
+Plug 'jalvesaq/Nvim-R'
 call plug#end()
 
 set nocompatible
@@ -35,3 +36,4 @@ nmap <C-h> <C-W><C-H>
 
 "let g:airline_powerline_fonts = 2
 let g:airline_theme='afterglow'
+let R_source = '~/.config/nvim/plugged/Nvim-R/R/tmux_split.vim'
