@@ -41,7 +41,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " Tabbing
 nnoremap <C-[> :tabprevious<CR>
 nnoremap <C-]> :tabnext<CR>
-nnoremap <C-e> :tabnew 
+nnoremap <C-e> :tabnew<CR> 
 nnoremap <C-x> :tabclose<CR>
 " Panel switching
 nmap <C-j> <C-W><C-J>
@@ -49,7 +49,8 @@ nmap <C-k> <C-W><C-K>
 nmap <C-l> <C-W><C-L>
 nmap <C-h> <C-W><C-H>
 " NERDcommenter
-nmap <C-S-/> <Plug>NERDCommenterToggle
+nmap <C-_> <Plug>NERDCommenterToggle
+vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
 "let g:airline_powerline_fonts = 2
 let g:airline_theme='afterglow'
