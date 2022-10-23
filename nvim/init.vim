@@ -4,16 +4,23 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'jalvesaq/Nvim-R'
+Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdcommenter' 
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'sirver/ultisnips'
 call plug#end()
 
+set encoding=utf-8
 set nocompatible
 set number
 set title
+set noswapfile
+set scrolloff=7
 set clipboard+=unnamedplus
-"For indents that consist of 4 space characters but are entered with the tab key:
-set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
+"Replaced some of this with more python-specific settings as suggested
+"https://www.youtube.com/watch?v=wzrZPcwh-b
+set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab autoindent fileformat=unix
 set nowrap
-set scrolloff=6
 " set background=dark
 set t_Co=256 " vim airline colors
 set cursorline
