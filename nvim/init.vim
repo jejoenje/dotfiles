@@ -27,7 +27,17 @@ set cursorline
 " Set cursor line color on visual mode
 highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
 
+" Themeing
 colorscheme afterglow
+let g:airline_theme='afterglow'
+"let g:airline_powerline_fonts = 2
+
+" Airline tabs (show buffers):
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnamemode=':t'
+
+" NERDTree setup
+let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
 
 " nvim-colorizer setup
 if(has("termguicolors"))
@@ -36,6 +46,11 @@ endif
 lua require 'colorizer'.setup()
 
 " Keybindings
+let mapleader = ' '
+" Buffers
+nmap <leader>1 :bp<CR>
+nmap <leader>2 :bn<CR>
+nmap <leader>0 :bd<CR>
 " NERDTREE
 nnoremap <C-n> :NERDTreeToggle<CR>
 " Tabbing
@@ -52,6 +67,5 @@ nmap <C-h> <C-W><C-H>
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
-"let g:airline_powerline_fonts = 2
-let g:airline_theme='afterglow'
+" Some R-specific setup
 "let R_source = '~/.config/nvim/plugged/Nvim-R/R/tmux_split.vim'
