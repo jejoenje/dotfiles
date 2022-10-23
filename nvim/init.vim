@@ -29,17 +29,27 @@ highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
 
 colorscheme afterglow
 
+" nvim-colorizer setup
+if(has("termguicolors"))
+    set termguicolors
+endif
+lua require 'colorizer'.setup()
+
+" Keybindings
+" NERDTREE
 nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
+" Tabbing
 nnoremap <C-[> :tabprevious<CR>
 nnoremap <C-]> :tabnext<CR>
 nnoremap <C-e> :tabnew 
 nnoremap <C-x> :tabclose<CR>
+" Panel switching
 nmap <C-j> <C-W><C-J>
 nmap <C-k> <C-W><C-K>
 nmap <C-l> <C-W><C-L>
 nmap <C-h> <C-W><C-H>
+" NERDcommenter
+nmap <C-S-/> <Plug>NERDCommenterToggle
 
 "let g:airline_powerline_fonts = 2
 let g:airline_theme='afterglow'
