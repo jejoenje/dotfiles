@@ -8,6 +8,15 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter' 
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'sirver/ultisnips'
+Plug 'jpalardy/vim-slime'
+"Plug 'roxma/nvim-yarp'  " dependency of ncm2
+"Plug 'ncm2/ncm2'  " awesome autocomplete plugin
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'Shougo/deoplete.nvim' "Async autocompletion
+"Plug 'zchee/deoplete-jedi' " Python autocompletion
+"Plug 'davidhalter/jedi-vim' " Just to add the python go-to-definition and similar features, autocompletion
+Plug 'airblade/vim-gitgutter'  " show git changes to files in gutter
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 set encoding=utf-8
@@ -44,6 +53,13 @@ if(has("termguicolors"))
     set termguicolors
 endif
 lua require 'colorizer'.setup()
+
+" vim-slime setup
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.1"}
+
+" CoC
+let b:coc_diagnostic_disable=1
 
 " Keybindings
 let mapleader = ' '
