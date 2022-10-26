@@ -25,7 +25,13 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+-- NERDTree --
+keymap("n", "<leader>e", ":NERDTreeToggle<CR>", opts)
+
+-- NERDCommenter --
+--keymap("n", "<C-_>", "<Plug>NERDCommenterToggle", opts)
+--keymap("n", "<C-_>", "<Plug>NERDCommenterToggle<CR>gv", opts)
+vim.api.nvim_set_keymap('', '<C-_>', ':call nerdcommenter#Comment(0, "Toggle")<CR>', {noremap = true})
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
