@@ -3,3 +3,5 @@ require "user.keymaps"
 require "user.plugins"
 require "user.cmp"
 vim.cmd "colorscheme afterglow"
+
+vim.g.NERDTreeShowHidden = 1
