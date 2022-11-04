@@ -7,7 +7,9 @@ Plug 'jalvesaq/Nvim-R'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter' 
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'sirver/ultisnips'
+"Plug 'sirver/ultisnips'
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown' }
 call plug#end()
 
 set encoding=utf-8
@@ -38,12 +40,6 @@ let g:airline#extensions#tabline#fnamemode=':t'
 
 " NERDTree setup
 let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
-
-" nvim-colorizer setup
-if(has("termguicolors"))
-    set termguicolors
-endif
-lua require 'colorizer'.setup()
 
 " Keybindings
 let mapleader = ' '
