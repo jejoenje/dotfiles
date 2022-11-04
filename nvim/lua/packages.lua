@@ -1,6 +1,9 @@
 require('packer').startup(function()
+
+  -- Packer
   use 'wbthomason/packer.nvim'
 
+  -- alpa-Neovim start screen
   use {
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
@@ -15,4 +18,8 @@ require('packer').startup(function()
   use "danilo-augusto/vim-afterglow"
   use "shaunsingh/nord.nvim"
   use "arcticicestudio/nord-vim"
+
+  -- IDE
+  use 'nvim-treesitter/nvim-treesitter'
+
 end)
