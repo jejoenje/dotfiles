@@ -95,6 +95,16 @@ _G.packer_plugins = {
     path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/nvim-treesitter",

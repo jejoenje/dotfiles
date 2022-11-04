@@ -21,5 +21,6 @@ require('packer').startup(function()
 
   -- IDE
   use 'nvim-treesitter/nvim-treesitter'
-
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
 end)

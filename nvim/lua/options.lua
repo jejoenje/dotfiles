@@ -15,4 +15,8 @@ configs.setup {
   }
 }
 
+-- TreeSitter 'folding'
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
+
 vim.cmd "colorscheme afterglow"
