@@ -1,8 +1,19 @@
 local o = vim.opt
 
-o.expandtab = true 
+o.backup = false
+o.swapfile = false
+o.clipboard = "unnamedplus"
+o.conceallevel = 0
+o.hlsearch = true
+o.mouse = "a"
+o.expandtab = true
+o.smartindent = true
 o.shiftwidth = 2
 o.softtabstop = 2
+o.number = true
+o.numberwidth = 4
+o.scrolloff = 8
+o.cursorline = true
 
 local configs = require'nvim-treesitter.configs'
 configs.setup {
