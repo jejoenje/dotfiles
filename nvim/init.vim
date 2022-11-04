@@ -7,16 +7,7 @@ Plug 'jalvesaq/Nvim-R'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter' 
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'sirver/ultisnips'
-Plug 'jpalardy/vim-slime'
-"Plug 'roxma/nvim-yarp'  " dependency of ncm2
-"Plug 'ncm2/ncm2'  " awesome autocomplete plugin
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'Shougo/deoplete.nvim' "Async autocompletion
-"Plug 'zchee/deoplete-jedi' " Python autocompletion
-"Plug 'davidhalter/jedi-vim' " Just to add the python go-to-definition and similar features, autocompletion
-Plug 'airblade/vim-gitgutter'  " show git changes to files in gutter
-Plug 'neovim/nvim-lspconfig'
+Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown' }
 call plug#end()
 
 set encoding=utf-8
@@ -47,19 +38,6 @@ let g:airline#extensions#tabline#fnamemode=':t'
 
 " NERDTree setup
 let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
-
-" nvim-colorizer setup
-if(has("termguicolors"))
-    set termguicolors
-endif
-lua require 'colorizer'.setup()
-
-" vim-slime setup
-let g:slime_target = "tmux"
-let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.1"}
-
-" CoC
-let b:coc_diagnostic_disable=1
 
 " Keybindings
 let mapleader = ' '
