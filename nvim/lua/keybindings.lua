@@ -12,6 +12,13 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Alpha toggle
+keymap('n','<leader>n', ":Alpha<cr>", {noremap = true})
+
+-- NERDTree toggle
+keymap("n", "<leader>e", ":NERDTreeToggle<CR>", opts)
+
+-- LSP key maps
 keymap('n','gd', ':lua vim.lsp.buf.definition()<cr>',opts)
 keymap('n','gD', ':lua vim.lsp.buf.declaration()<cr>',opts)
 keymap('n','gi', ':lua vim.lsp.buf.implementation()<cr>',opts)

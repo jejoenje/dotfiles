@@ -24,7 +24,6 @@ require('packer').startup(function()
     requires = { 'kyazdani42/nvim-web-devicons' },
     config = function ()
       require'alpha'.setup(require'alpha.themes.startify'.config)
-      vim.api.nvim_set_keymap('n','<c-n>', ":Alpha<cr>", {noremap = true}) 
     end
   }
 
@@ -38,4 +37,6 @@ require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter'
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+  use "preservim/nerdtree"
+
 end)

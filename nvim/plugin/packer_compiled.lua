@@ -85,6 +85,11 @@ _G.packer_plugins = {
     path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/molokai",
     url = "https://github.com/tomasr/molokai"
   },
+  nerdtree = {
+    loaded = true,
+    path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/preservim/nerdtree"
+  },
   ["nord-vim"] = {
     loaded = true,
     path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/nord-vim",
