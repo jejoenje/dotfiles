@@ -18,6 +18,14 @@ keymap('n','<leader>n', ":Alpha<cr>", {noremap = true})
 -- NERDTree toggle
 keymap("n", "<leader>e", ":NERDTreeToggle<CR>", opts)
 
+-- TreeSitter toggle
+-- keymap('n','<leader>F', 'zR', opts)
+-- keymap('n','<leader>C', 'zM', opts)
+-- keymap('n','<leader>ff', 'zO', opts)
+-- keymap('n','<leader>cc', 'zC', opts)
+-- keymap('n','<leader>f', 'zo', opts)
+-- keymap('n','<leader>c', 'zc', opts)
+
 -- LSP key maps
 keymap('n','gd', ':lua vim.lsp.buf.definition()<cr>',opts)
 keymap('n','gD', ':lua vim.lsp.buf.declaration()<cr>',opts)
