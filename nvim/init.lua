@@ -1,6 +1,6 @@
 require("keybindings")
 require("options")
-require("packages")
+require("plugins")
 
 -- LSP config
 local lsp_installer = require("nvim-lsp-installer")
