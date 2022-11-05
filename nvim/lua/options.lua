@@ -14,6 +14,8 @@ o.number = true
 o.numberwidth = 4
 o.scrolloff = 8
 o.cursorline = true
+--o.showtabline = 2
+o.termguicolors = true
 
 local configs = require'nvim-treesitter.configs'
 configs.setup {

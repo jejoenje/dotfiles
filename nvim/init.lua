@@ -10,3 +10,4 @@ lsp_installer.on_server_ready(function(server)
 end)
 -- Disable inline diagnostics:
 --vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+

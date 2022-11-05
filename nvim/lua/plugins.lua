@@ -38,5 +38,19 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use "preservim/nerdtree"
-
+  --use {
+  --  'akinsho/bufferline.nvim', 
+  --  tag = "v3.*", 
+  --  requires = 'kyazdani42/nvim-web-devicons',
+  --  config = function()
+  --    require("bufferline").setup{}
+  --  end
+  --}
+    use({
+      'noib3/nvim-cokeline',
+      requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
+      config = function()
+        require('cokeline').setup()
+      end
+    })
 end)
