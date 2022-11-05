@@ -52,7 +52,7 @@ require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
-
+  use 'jalvesaq/Nvim-R'
 end)
 
 local cmp = require'cmp'
@@ -149,15 +149,29 @@ cmp.setup({
       "s",
     }),
   },
-  sources = cmp.config.sources({
+  formatting = {
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, vim_item)
+      -- Kind icons
+      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+      vim_item.menu = ({
+        nvim_lsp = "[LSP]",
+        --nvim_lua = "[NVIM_LUA]",
+        luasnip = "[Luasnip]",
+        buffer = "[Buffer]",
+        path = "[Path]",
+      })[entry.source.name]
+      return vim_item
+    end,
+  },
+  sources = cmp.config.sources {
     { name = 'nvim_lsp' },
-    -- { name = 'vsnip' }, -- For vsnip users.
-    { name = 'luasnip' }, -- For luasnip users.
-    -- { name = 'ultisnips' }, -- For ultisnips users.
-    -- { name = 'snippy' }, -- For snippy users.
-    }, {
+    --{ name = 'nvim_lua' },
+    { name = 'luasnip' },
     { name = 'buffer' },
-  })
+    { name = 'path' },
+  }
 })
 
 -- Set configuration for specific filetype.
