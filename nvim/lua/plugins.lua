@@ -52,7 +52,11 @@ require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
-  -- use 'jalvesaq/Nvim-R'
+  use 'wsdjeg/Nvim-R'
+  use 'ncm2/ncm2'
+  use 'roxma/nvim-yarp'
+  use 'gaalcaras/ncm-R'
+
 end)
 
 local cmp = require'cmp'
@@ -165,13 +169,21 @@ cmp.setup({
       return vim_item
     end,
   },
+  completion = {
+    get_trigger_characters = function(trigger_characters)
+            if vim.bo.filetype == "r" or vim.bo.filetype == "rmd" or vim.bo.filetype == "R" then
+                table.insert(trigger_characters, "$")
+            end
+            return trigger_characters
+        end, 
+  },
   sources = cmp.config.sources {
     { name = 'nvim_lsp' },
     --{ name = 'nvim_lua' },
     { name = 'luasnip' },
     { name = 'buffer' },
     { name = 'path' },
-  }
+  },
 })
 
 -- Set configuration for specific filetype.

@@ -82,7 +82,7 @@ _G.packer_plugins = {
   ["Nvim-R"] = {
     loaded = true,
     path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/Nvim-R",
-    url = "https://github.com/jalvesaq/Nvim-R"
+    url = "https://github.com/wsdjeg/Nvim-R"
   },
   ["alpha-nvim"] = {
     config = { "\27LJ\2\2`\0\0\3\0\5\0\n6\0\0\0'\1\1\0B\0\2\0029\0\2\0006\1\0\0'\2\3\0B\1\2\0029\1\4\1B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0" },
@@ -119,6 +119,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/molokai",
     url = "https://github.com/tomasr/molokai"
+  },
+  ["ncm-R"] = {
+    loaded = true,
+    path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/ncm-R",
+    url = "https://github.com/gaalcaras/ncm-R"
+  },
+  ncm2 = {
+    loaded = true,
+    path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/ncm2",
+    url = "https://github.com/ncm2/ncm2"
   },
   nerdtree = {
     loaded = true,
@@ -165,6 +175,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["nvim-yarp"] = {
+    loaded = true,
+    path = "/home/jejoenje/.local/share/nvim/site/pack/packer/start/nvim-yarp",
+    url = "https://github.com/roxma/nvim-yarp"
   },
   ["packer.nvim"] = {
     loaded = true,
