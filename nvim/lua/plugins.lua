@@ -19,7 +19,7 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- alpa-Neovim start screen
-  use {
+  use { 
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
     config = function ()
@@ -101,15 +101,18 @@ local kind_icons = {
 }
 
 cmp.setup({
+  -- Set bordered windows for both completion and doc popup menus  
   window = {
       completion = cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
   },
+  -- Snippet config
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
+  -- Keymapping for popup windows
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-j>"] = cmp.mapping.select_next_item(),
@@ -170,6 +173,7 @@ cmp.setup({
     end,
   },
   completion = {
+    -- get_trigger_characters() ensures that completion works also for $ objects in R
     get_trigger_characters = function(trigger_characters)
             if vim.bo.filetype == "r" or vim.bo.filetype == "rmd" or vim.bo.filetype == "R" then
                 table.insert(trigger_characters, "$")
@@ -196,6 +200,7 @@ cmp.setup.filetype('gitcommit', {
 })
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+-- This allows for autocompletion when searching or using help
 cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
