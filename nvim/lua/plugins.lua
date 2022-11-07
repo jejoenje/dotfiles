@@ -56,6 +56,7 @@ require('packer').startup(function()
   use 'ncm2/ncm2'
   use 'roxma/nvim-yarp'
   use 'gaalcaras/ncm-R'
-
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
 end)
 

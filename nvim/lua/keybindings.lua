@@ -38,3 +38,8 @@ keymap('n','K', ':lua vim.lsp.buf.hover()<cr>',opts)
 keymap('n','<c-k>', ':lua vim.lsp.buf.signature_help()<cr>',opts)
 keymap('n','<leader>af', ':lua vim.lsp.buf.code_action()<cr>',opts)
 keymap('n','<leader>rn', ':lua vim.lsp.buf.rename()<cr>',opts)
+
+-- Telescope
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+-- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
