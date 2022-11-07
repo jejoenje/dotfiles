@@ -34,7 +34,7 @@ o.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- LSP inline diagnostics toggle
 local diagnostics_active = true
-vim.keymap.set('n', '<leader>d', function()
+vim.keymap.set('n', '<leader>=', function()
   diagnostics_active = not diagnostics_active
   if diagnostics_active then
     vim.diagnostic.show()
