@@ -4,6 +4,7 @@ require("plugins")
 require("cmp_config")
 require("lsp_config")
 require("telescope")
+require("comment")
 
 -- Disable inline diagnostics:
 --vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end

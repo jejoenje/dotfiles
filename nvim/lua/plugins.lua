@@ -58,5 +58,12 @@ require('packer').startup(function()
   use 'gaalcaras/ncm-R'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+  use 'numToStr/Comment.nvim'
+  use "lewis6991/gitsigns.nvim"
+
 end)
 

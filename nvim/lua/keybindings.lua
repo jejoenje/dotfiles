@@ -42,4 +42,8 @@ keymap('n','<leader>rn', ':lua vim.lsp.buf.rename()<cr>',opts)
 -- Telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
+
+-- NERDcommenter
+-- keymap("n", '<leader>_', "<cmd>NERDCommenterToggle", opts)
+-- keymap("v", '<leader>_', "<cmd>NERDCommenterToggle<cr>gv", opts)
