@@ -38,13 +38,6 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use "preservim/nerdtree"
-  use {
-    'noib3/nvim-cokeline',
-    requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
-    config = function()
-      require('cokeline').setup()
-    end
-  }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -64,6 +57,7 @@ require('packer').startup(function()
   }
   use 'numToStr/Comment.nvim'
   use "lewis6991/gitsigns.nvim"
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
 end)
 

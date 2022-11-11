@@ -1,16 +1,20 @@
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true }
 
+--Remap space as leader key
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- L/R/U/D main key maps
 keymap('n', '<c-j>', '<c-w>j', opts)
 keymap('n', '<c-k>', '<c-w>k', opts)
 keymap('n', '<c-h>', '<c-w>h', opts)
 keymap('n', '<c-l>', '<c-w>l', opts)
 
---Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+-- Navigate buffers
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Alpha toggle
 keymap('n','<leader>n', ":Alpha<cr>", {noremap = true})
@@ -47,3 +51,7 @@ keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
 -- NERDcommenter
 -- keymap("n", '<leader>_', "<cmd>NERDCommenterToggle", opts)
 -- keymap("v", '<leader>_', "<cmd>NERDCommenterToggle<cr>gv", opts)
+
+-- Move text up and down
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)

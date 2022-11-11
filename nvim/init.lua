@@ -6,6 +6,7 @@ require("lsp_config")
 require("telescope")
 require("comment")
 require("gitsigns_config")
+require("bufferline_config")
 
 -- Disable inline diagnostics:
 --vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
