@@ -3,3 +3,6 @@
   dynamic_padding = true
   opacity = 0.8
   blur = true
+
+[font]
+  size = 13 # 11.25
