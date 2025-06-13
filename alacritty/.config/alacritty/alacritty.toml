@@ -1,4 +1,3 @@
-import = ["~/.cache/wal/colors-alacritty.toml"]
 
 [window]
   padding = { x = 10, y = 10 }
@@ -8,3 +7,6 @@ import = ["~/.cache/wal/colors-alacritty.toml"]
 
 [font]
   size = 13 # 11.25
+
+[general]
+import = ["~/.cache/wal/colors-alacritty.toml"]
