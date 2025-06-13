@@ -2,7 +2,7 @@
 
 * {
     font-family: 'Radio Canada Big', sans-serif;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 16px;
     border-radius: 10px;
 }
@@ -48,7 +48,7 @@ window#waybar {
 }
 
 #clock {
-    color: @color3; /* color3 */
+    color: @color5; /* color3 */
     background-color: @background; /* background */
     margin: 0 15px 0 0;
     padding: 0 15px 0 15px;

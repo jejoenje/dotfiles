@@ -2,9 +2,9 @@
   "layer": "top",
   "position": "top",
   "margin-top": 13,
-  "modules-left": ["clock", "custom/weather"],
+  "modules-left": ["hyprland/workspaces", "custom/weather"],
   "modules-center": ["hyprland/workspaces", "custom/media"],
-  "modules-right": ["pulseaudio", "battery", "network"],
+  "modules-right": ["pulseaudio", "battery", "network", "clock"],
 
   "custom/pacman": {
     "format": " {}   ",
