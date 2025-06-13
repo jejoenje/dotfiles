@@ -3,7 +3,8 @@
   "position": "top",
   "margin-top": 13,
   "modules-left": ["hyprland/workspaces", "custom/weather"],
-  "modules-center": ["hyprland/workspaces", "custom/media"],
+  //"modules-center": ["hyprland/workspaces", "custom/media"],
+  "modules-center": [],
   "modules-right": ["backlight", "pulseaudio", "battery", "network", "clock"],
 
   "custom/pacman": {
