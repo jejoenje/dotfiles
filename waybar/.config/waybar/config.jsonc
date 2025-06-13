@@ -4,7 +4,7 @@
   "margin-top": 13,
   "modules-left": ["hyprland/workspaces", "custom/weather"],
   "modules-center": ["hyprland/workspaces", "custom/media"],
-  "modules-right": ["pulseaudio", "battery", "network", "clock"],
+  "modules-right": ["backlight", "pulseaudio", "battery", "network", "clock"],
 
   "custom/pacman": {
     "format": " {}   ",
@@ -34,7 +34,7 @@
   },
 
   "clock": {
-    "format": "󰥔   {:%I:%M %p}",
+    "format": "󰥔   {:%H:%M}",
     "format-alt": "󰥔   {:%a, %d. %b  %I:%M %p}"
   },
 
@@ -57,7 +57,7 @@
   },
 
   "network": {
-    "interface": "wlo1",
+    "interface": "wlp1s0",
     "format": "{ifname}",
     "format-wifi": "{icon}   {essid}",
     "format-ethernet": "󰈀   {ipaddr}/{cidr}",
