@@ -23,11 +23,11 @@ window#waybar {
 }
 
 .modules-left {
-    margin-left: 12px;    
+    margin-left: 5px;    
 }
 
 .modules-right {
-    margin-right: 12px;    
+    margin-right: 5px;    
 }
 
 #battery,
@@ -36,21 +36,21 @@ window#waybar {
 #custom-weather {
     color: @color5; /* color5 */
     background-color: @background; /* background */
-    margin: 0 15px 0 0px;
+    margin: 0 10px 0 0px;
     padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
 
 #network {
     color: @color2; /* color2 */
     background-color: @background; /* background */
-    margin: 0 15px 0 0px;
+    margin: 0 10px 0 0px;
     padding: 0 15px 0 15px; /* top, right, bottom, left */
 }
 
 #clock {
     color: @color5; /* color3 */
     background-color: @background; /* background */
-    margin: 0 15px 0 0;
+    margin: 0 10px 0 0;
     padding: 0 15px 0 15px;
 }
 
