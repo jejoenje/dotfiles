@@ -60,7 +60,8 @@
   "network": {
     "interface": "wlp1s0",
     "format": "{ifname}",
-    "format-wifi": "{icon}   {essid}",
+    //"format-wifi": "{icon}   {essid}",
+    "format-wifi": "{icon} ",
     "format-ethernet": "󰈀   {ipaddr}/{cidr}",
     "format-disconnected": "󰤭   disconnected",
     "max-length": 50,
