@@ -10,6 +10,6 @@ wpfile=$(find ~/wallpaper/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.gi
 swww img $wpfile &
 
 # Generate colour scheme
-wal -q -i $wpfile &
+wal -q --contrast 5 -i $wpfile &
 
 
