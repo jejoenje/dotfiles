@@ -66,7 +66,8 @@
     "format-disconnected": "󰤭   disconnected",
     "max-length": 50,
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "tooltip-format": "{essid}"
+    "tooltip-format": "{essid}",
+    "on-click": "~/.config/hypr/scripts/rofi_wifi.sh"
   },
 
   "hyprland/workspaces": {
