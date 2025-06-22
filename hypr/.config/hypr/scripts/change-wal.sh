@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# Pick random wallpeper from folder
+### Pick random wallpeper from folder
 wpfile=$(find ~/wallpaper/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.gif" | shuf -n 1)
 
 
-# Reset swww, and set to randomly picked file
+### Reset swww, and set to randomly picked file
 #swww kill
 #swww init
 swww img $wpfile &
 
-# Generate colour scheme
-wal -q -l --contrast 10 --saturate 0.5 -i $wpfile &
+### Generate colour scheme
+# wal -q -l --contrast 10 --saturate 0.5 -i $wpfile &  # Light
+wal -q --contrast 10 --saturate 0.5 -i $wpfile &       # Dark
 
 
