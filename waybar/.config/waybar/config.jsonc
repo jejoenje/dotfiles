@@ -5,7 +5,7 @@
   "modules-left": ["hyprland/workspaces", "custom/weather"],
   //"modules-center": ["hyprland/workspaces", "custom/media"],
   "modules-center": [],
-  "modules-right": ["backlight", "pulseaudio", "battery", "network", "clock"],
+  "modules-right": ["custom/dropbox", "backlight", "pulseaudio", "battery", "network", "clock"],
 
   "custom/pacman": {
     "format": " {}   ",
@@ -26,6 +26,14 @@
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous",
     "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
+  },
+
+  "custom/dropbox": {
+    "exec": "~/.config/waybar/scripts/dropbox-waybar.sh",
+    "return-type": "json",
+    "format": "  {text} ", 
+    "interval": 10,
+    "tooltip": true
   },
 
   "battery": {
