@@ -71,6 +71,15 @@ vim.opt.encoding = "UTF-8"              -- Set encoding
 ---
 vim.keymap.set("n", "<leader>/", ":noh<CR>", { desc = "Clear search highlights" })
 
+-- Center screen when jumping
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
+
+-- Quick file navigation
+vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open file explorer" })
+vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
 
 -- CLIPBOARD ATTEMPT
 -- 
@@ -78,3 +87,26 @@ vim.schedule(function()
   vim.o.clipboard = "unnamedplus"
 end)
 --vim.o.clipboard = "unnamedplus"
+
+--
+-- USEFUL FUNCTIONS
+--
+
+-- Return to last edit position when opening files
+vim.api.nvim_create_autocmd("BufReadPost", {
+  group = augroup,
+  callback = function()
+    local mark = vim.api.nvim_buf_get_mark(0, '"')
+    local lcount = vim.api.nvim_buf_line_count(0)
+    if mark[1] > 0 and mark[1] <= lcount then
+      pcall(vim.api.nvim_win_set_cursor, 0, mark)
+    end
+  end,
+})
+
+--
+-- PLUGINS ETC
+--
+vim.lsp.enable('pyright')
+
+
