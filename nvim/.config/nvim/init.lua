@@ -5,4 +5,4 @@ require("config.utils")
 require("config.statusline")
 require("config.lsp")
 require("config.autocmds")
-
+require("config.lazy")
