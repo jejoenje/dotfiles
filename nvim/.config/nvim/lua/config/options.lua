@@ -7,6 +7,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 -- vim.go.have_nerd_font = true
 
+vim.o.lazyredraw = true 
+
 --  Line numbers, scrolling etc
 vim.o.number = true
 vim.o.relativenumber = true
