@@ -17,6 +17,10 @@ return {
       }
     },
     indent = { enabled = true },
+    notifier = {
+      enable = true,
+      timeout = 10000,
+    },
   },
   keys = {
     {
