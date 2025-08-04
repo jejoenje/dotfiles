@@ -81,7 +81,7 @@ window#waybar {
 }
 
 #custom-wg {
-    color: @color15;
+    color: @color2;
     background-color: @background;
     margin: 0 10px 0 0;
     padding: 0 15px 0 15px;
