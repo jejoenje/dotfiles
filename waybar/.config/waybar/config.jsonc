@@ -5,7 +5,7 @@
   "modules-left": ["hyprland/workspaces", "custom/weather"],
   //"modules-center": ["hyprland/workspaces", "custom/media"],
   "modules-center": [],
-  "modules-right": ["custom/dropbox", "backlight", "pulseaudio", "battery", "network", "custom/openvpn", "clock"],
+  "modules-right": ["custom/dropbox", "backlight", "pulseaudio", "battery", "network", "custom/wg", "custom/openvpn", "clock"],
 
   "custom/pacman": {
     "format": " {}   ",
@@ -36,6 +36,12 @@
     "tooltip": true
   },
 
+  "custom/wg": {
+    "exec": "~/.config/waybar/scripts/wg-waybar.sh",
+    "interval": 5,
+    "return-type": "json"
+  },
+  
   "custom/openvpn": {
       //"format": "VPN: {}",
       "format": "󰖂",
