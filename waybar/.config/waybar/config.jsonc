@@ -5,7 +5,7 @@
   "modules-left": ["hyprland/workspaces", "custom/weather"],
   //"modules-center": ["hyprland/workspaces", "custom/media"],
   "modules-center": [],
-  "modules-right": ["custom/dropbox", "backlight", "pulseaudio", "battery", "network", "clock"],
+  "modules-right": ["custom/dropbox", "backlight", "pulseaudio", "battery", "network", "custom/openvpn", "clock"],
 
   "custom/pacman": {
     "format": " {}   ",
@@ -34,6 +34,14 @@
     "format": "  {text} ", 
     "interval": 10,
     "tooltip": true
+  },
+
+  "custom/openvpn": {
+      //"format": "VPN: {}",
+      "format": "󰖂",
+      "exec": "systemctl is-active openvpn-client@flerelnet.service",
+      "interval": 5,
+      //"on-click": "~/.config/waybar/scripts/vpn-toggle.sh"
   },
 
   "battery": {

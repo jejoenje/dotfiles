@@ -73,6 +73,14 @@ window#waybar {
     padding: 0 15px 0 15px;
 }
 
+#custom-openvpn {
+    /*color: @color5; */
+    color: @color15;
+    background-color: @background;
+    margin: 0 10px 0 0;
+    padding: 0 15px 0 15px;
+}
+
 #custom-weather {
     color: @color4; /* color2 */
     background-color: @background; /* background */
