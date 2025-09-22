@@ -11,6 +11,9 @@ swww img $wpfile &
 
 ### Generate colour scheme
 # wal -q -l --contrast 10 --saturate 0.5 -i $wpfile &  # Light
-wal -q --contrast 10 --saturate 0.5 -i $wpfile &       # Dark
+# wal -q --contrast 10 --saturate 0.5 -i $wpfile &       # Dark
+wal -q --contrast 20 --saturate 0.5 -i $wpfile &       # Dark
 
+### Update mako colours
+~/.config/mako/update-mako-colors.sh
 
